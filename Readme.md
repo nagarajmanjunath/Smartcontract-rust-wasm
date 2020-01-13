@@ -1,7 +1,7 @@
 
 # Smar-contract using Rust with wasm
 
-  This is the simple get and set contract, which is written using the rust and it will be compiled to wasm.
+   This repository contains smart contract implementation, which is written using the rust and be compiled to wasm.
 
 
 # Build prerequisites
@@ -20,9 +20,12 @@
 
          yarn install
 
+# Build the rust traget binary
+
+        cargo build
 
 # Complie smart contract to wasm
 
       ./build.sh
 
-NOTE: Getter smart contract wiil get  compiled  and generate the traget folder which consist of json and wasm complied contract. which can be deployed.
+NOTE: Smart contract will get  compiled  and generate the traget folder which consist of json and wasm complied contract. which can be deployed.
