@@ -1,7 +1,7 @@
 [package]
-name = "pwasm-tutorial-contract"
+name = "greeter"
 version = "0.1.0"
-authors = ["Alexey Frolov <alexey@parity.io>"]
+authors = ["Nagaraj"]
 
 [dependencies]
 pwasm-std = "0.13"

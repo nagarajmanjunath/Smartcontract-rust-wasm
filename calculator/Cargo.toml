@@ -1,7 +1,7 @@
 [package]
-name = "pwasm-tutorial-contract"
+name = "calculator"
 version = "0.1.0"
-authors = ["Alexey Frolov <alexey@parity.io>"]
+authors = ["Nagaraj"]
 
 [dependencies]
 pwasm-std = "0.13"
@@ -10,9 +10,6 @@ pwasm-abi = "0.2"
 pwasm-abi-derive = "0.2"
 lazy_static = { version = "1.2.0", features = ["spin_no_std"] }
 
-[dev-dependencies.pwasm-test]
-git = "https://github.com/paritytech/pwasm-test"
-default-features = false
 
 [lib]
 crate-type = ["cdylib"]

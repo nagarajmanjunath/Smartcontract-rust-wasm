@@ -57,6 +57,18 @@ version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "greeter"
+version = "0.1.0"
+dependencies = [
+ "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pwasm-abi 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pwasm-abi-derive 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pwasm-ethereum 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pwasm-std 0.13.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pwasm-test 0.1.1 (git+https://github.com/paritytech/pwasm-test)",
+]
+
+[[package]]
 name = "itoa"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -159,18 +171,6 @@ dependencies = [
  "pwasm-abi 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "pwasm-ethereum 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "pwasm-std 0.13.0 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "pwasm-tutorial-contract"
-version = "0.1.0"
-dependencies = [
- "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "pwasm-abi 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "pwasm-abi-derive 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "pwasm-ethereum 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "pwasm-std 0.13.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "pwasm-test 0.1.1 (git+https://github.com/paritytech/pwasm-test)",
 ]
 
 [[package]]
