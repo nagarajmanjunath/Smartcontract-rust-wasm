@@ -7,7 +7,7 @@ web3.eth.defaultAccount = "0x004ec07d2329997267ec62b4166639513386f32e";
 // read JSON ABI
 var abi = JSON.parse(fs.readFileSync("./calculator/target/json/CalculatorInterface.json"));
 // convert Wasm binary to hex format
-var codeHex = '0x' + fs.readFileSync("./calculator/target/pwasm_tutorial_contract.wasm").toString('hex');
+var codeHex = '0x' + fs.readFileSync("./calculator/target/calculator.wasm").toString('hex');
 console.log("code_hex",codeHex);
 var TokenContract = new web3.eth.Contract(abi, { data: codeHex, from: web3.eth.defaultAccount });
 var TokenDeployTransaction = TokenContract.deploy({ data: codeHex});

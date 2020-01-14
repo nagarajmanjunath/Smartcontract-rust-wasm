@@ -7,7 +7,7 @@ web3.eth.defaultAccount = "0x004ec07d2329997267ec62b4166639513386f32e";
 // read JSON ABI
 var abi = JSON.parse(fs.readFileSync("./greeter/target/json/GreeterInterface.json"));
 // convert Wasm binary to hex format
-var codeHex = '0x' + fs.readFileSync("./greeter/target/pwasm_tutorial_contract.wasm").toString('hex');
+var codeHex = '0x' + fs.readFileSync("./greeter/target/greeter.wasm").toString('hex');
 
 console.log("code_hex",codeHex);
 
