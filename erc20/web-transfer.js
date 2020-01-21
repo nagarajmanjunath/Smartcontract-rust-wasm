@@ -7,7 +7,7 @@ var acc = "0x004ec07d2329997267ec62b4166639513386f32e";
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 // NOTE: if you run Kovan node there should be an address you've got in the "Option 2: Run Kovan node" step
 
-var abi = JSON.parse(fs.readFileSync("./erc-20/target/json/TokenInterface.json"));
+var abi = JSON.parse(fs.readFileSync("/Users/nagaraj/gowork/src/github.com/Smartcontract-rust-wasm/erc20/target/json/TokenInterface.json"));
 
 var Contract = new web3.eth.Contract(abi,contract_address);
 console.log(Contract)
