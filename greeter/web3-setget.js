@@ -1,4 +1,4 @@
-var Web3 = require("./node_modules/web3");
+var Web3 = require("../greeter/node_modules/web3/types");
 var fs = require("fs");
 
 var contract_address = "0x1ffB8accd6d248f36bD2Fa56821C76b42dEF7B5D";

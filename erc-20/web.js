@@ -1,4 +1,4 @@
-var Web3 = require("./node_modules/web3");
+var Web3 = require("web3");
 var fs = require("fs");
 // Connect to our local node
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:3030"));
@@ -11,6 +11,7 @@ var codeHex = '0x' + fs.readFileSync("/Users/nagaraj/gowork/src/github.com/Smart
 
 var TokenContract = new web3.eth.Contract(abi, { data: codeHex, from: web3.eth.defaultAccount });
 // var TokenDeployTransaction = TokenContract.deploy({ data: codeHex});
+console.log(TokenContract);
 
 var TokenDeployTransaction = TokenContract.deploy({data: codeHex, arguments: [10000000]});
 

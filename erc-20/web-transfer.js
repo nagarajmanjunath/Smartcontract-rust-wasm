@@ -1,4 +1,4 @@
-var Web3 = require("./node_modules/web3");
+var Web3 = require("web3");
 var fs = require("fs");
 
 var contract_address = "0xeDFC9c2F4Cfa7495c1A95CfE1cB856F5980D5e18";
