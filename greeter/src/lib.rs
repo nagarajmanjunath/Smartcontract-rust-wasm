@@ -26,32 +26,28 @@ pub mod greeter {
         #[constant]
         fn getX(& mut self) -> U256;
 
-
     }
 
     pub struct GreeterContract;
 
     impl GreeterInterface for GreeterContract {
         fn constructor(& mut self) {
+
         }
 
         fn setX(&mut self, x : U256) {
-             let sender = pwasm_ethereum::sender();
-            pwasm_ethereum::write(&result_key(&sender), &x.into());
+            pwasm_ethereum::write(&result_key(), &x.into());
         }
 
         fn getX(& mut self) -> U256 {
-             let sender = pwasm_ethereum::sender();
-            U256::from_big_endian(&pwasm_ethereum::read(&result_key(&sender)))
+            U256::from_big_endian(&pwasm_ethereum::read(&result_key()))
         }
+
     }
 
 
-   // Generates a balance key for some address.
-    // Used to map balances with their owners.
-    fn result_key(address: &Address) -> H256 {
-        let mut key = H256::from(*address);
-        key.as_bytes_mut()[0] = 1; // just a naive "namespace";
+    fn result_key() -> H256 {
+        let  key = H256::zero();
         key
     }
 }
@@ -62,9 +58,7 @@ use pwasm_abi::eth::EndpointInterface;
 pub fn call() {
     let mut endpoint = greeter::GreeterEndpoint::new(greeter::GreeterContract{});
     // Read http://solidity.readthedocs.io/en/develop/abi-spec.html#formal-specification-of-the-encoding for details
-    // pwasm_ethereum::ret(&endpoint.dispatch(&pwasm_ethereum::input()));
-    pwasm_ethereum::value();
-    pwasm_ethereum::sender();
+    pwasm_ethereum::ret(&endpoint.dispatch(&pwasm_ethereum::input()));
 }
 
 #[no_mangle]
