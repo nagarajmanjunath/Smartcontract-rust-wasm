@@ -1,5 +1,5 @@
 
-# Smar-contract using Rust with wasm
+# Smart-contract using Rust with wasm
 
    This repository contains smart contract implementation, which is written using the rust and be compiled to wasm.
 
