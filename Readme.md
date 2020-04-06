@@ -12,7 +12,7 @@
 
  * Install wasm
 
-
+         cargo install pwasm-utils-cli
          rustup target add wasm32-unknown-unknown
 
 
